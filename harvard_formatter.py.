@@ -1,0 +1,22 @@
+def format_harvard(text):
+    formatted_text = ""
+    
+    # Harvard Style: Add a basic header structure
+    formatted_text += "\nTitle of the Assignment\n"
+    formatted_text += "Student ID: XXXXXXX\nCourse: ABC123\n\n"
+
+    # Body text formatting
+    lines = text.split('\n')
+    for line in lines:
+        formatted_text += line.strip() + "\n\n"  # Double-space paragraphs
+
+    return formatted_text
+
+# Example usage
+raw_text = """
+Title of the Assignment
+This is the introduction paragraph.
+
+The main body of the assignment begins here.
+"""
+print(format_harvard(raw_text))
