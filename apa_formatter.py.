@@ -1,0 +1,29 @@
+def format_apa(text):
+    formatted_text = ""
+    
+    # APA Style: Title Page
+    formatted_text += "\nTitle of the Paper\n"
+    formatted_text += "Student Name\n"
+    formatted_text += "Institution Name\n\n"
+
+    # Replace "References" heading, center-align titles
+    text = text.replace("References", "\n\nReferences\n")
+
+    # APA Style: Double-spacing all content
+    lines = text.split('\n')
+    for line in lines:
+        formatted_text += line.strip() + "\n\n"
+
+    return formatted_text
+
+# Example usage
+raw_text = """
+Title of the Paper
+This is the introduction paragraph.
+
+The main body of the paper begins here.
+
+References
+Smith, J. (2020). Understanding the basics of APA. Journal of Education, 10(2), 123-134.
+"""
+print(format_apa(raw_text))
