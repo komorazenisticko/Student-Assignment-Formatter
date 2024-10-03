@@ -1,0 +1,22 @@
+def format_mla(text):
+    formatted_text = ""
+    
+    # MLA Style: Header and Student Information
+    formatted_text += "Student Name\nProfessor's Name\nCourse Title\nDate\n\n"
+
+    # Center-align title and format body paragraphs
+    lines = text.split('\n')
+    for line in lines:
+        if line.strip():
+            formatted_text += "\t" + line.strip() + "\n\n"  # Add tab spacing for paragraph indent
+
+    return formatted_text
+
+# Example usage
+raw_text = """
+Title of the Paper
+This is the introduction paragraph.
+
+The main body of the paper begins here.
+"""
+print(format_mla(raw_text))
